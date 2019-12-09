@@ -84,7 +84,7 @@ void save (char* filename) {
       if (have_sword()) {
         fprintf(f, "INVENTORY SWORD\n");
       }
-      if (have_hammer) {
+      if (have_hammer()) {
         fprintf(f, "INVENTORY HAMMER\n");
       }
       fprintf(f, "X %d %d %d\n", get_location_x_room(), get_location_y_room(), get_location_z_room());

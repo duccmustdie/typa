@@ -22,6 +22,9 @@ int get_location_z_room();
 void set_location_z_room(int z);
 void print_maze();
 
+int is_wall(int x, int y, int z);
+void break_wall(int x, int y, int z);
+
 void summon_treasure(int x, int y, int z);
 int is_treasure(int x, int y, int z);
 

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "maze.h"
+
 static room_t maze[10][10][10];
 static int location_x;
 static int location_y;

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <termios.h>
 #include "maze.h"
+#include "file.h"
 
 static struct termios old_settings;
 static struct termios new_settings;
@@ -37,25 +38,25 @@ int main( int argc, char** argv ) {
       int z = get_location_z_room();
 			if ((c = getchar()) == 65) {
         if (have_hammer() && is_wall(i, j-1, z)) {
-          break_wall(i, j-1, z, 0);
+          break_wall(i, j-1, z);
         } else {
           move_up();
         }
       } else if (c == 66) {
         if (have_hammer() && is_wall(i, j+1, z)) {
-          break_wall(i, j+1, z, 0);
+          break_wall(i, j+1, z);
         } else {
           move_down();
         }
       } else if (c == 67) {
         if (have_hammer() && is_wall(i+1, j, z)) {
-          break_wall(i+1, j, z, 0);
+          break_wall(i+1, j, z);
         } else {
           move_right();
         }
       } else if (c == 68) {
         if (have_hammer() && is_wall(i-1, j, z)) {
-          break_wall(i-1, j, z, 0);
+          break_wall(i-1, j, z);
         } else {
           move_left();
         }
